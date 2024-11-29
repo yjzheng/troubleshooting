@@ -1,0 +1,9 @@
+c
+python
+import time
+timestamp = time.strftime("%Y%m%d_%H%M%S")
+filename = f"core_{timestamp}.dump"
+gdb.execute(f"gcore {filename}")
+print(f"Core dump saved as {filename}")
+end
+quit
